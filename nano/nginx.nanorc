@@ -1,0 +1,12 @@
+header "#nginx config"
+
+color magenta "(events |http |server |location |include )"
+color yellow "[0-9.,]*![A-Za-z]"
+color yellow "[0-9]*(k|kb|kB|m|M|MB|Mb|g|G|Gb|GB)![A-Za-Z]"
+color yellow "( True;| true;| False;| false;| On;| on;| Off;| off;| spdy;| ssl;)"
+color cyan "(access_log |add_header |allow |default_type |deny |error_log |expires |index |listen |proxy_pass |proxy_redirect |proxy_set_header |root |server_name |ssi |ssl | ssl_certificate |ssl_certificate_key |ssl_cyphers |ssl_prefer_server_cyphers |try_files |pagespeed )"
+color brightyellow "[|()]"
+color brightblue "(http|https|ftp|mailto|\$scheme)://([A-Za-z0-9_-+?:.,|\\/\[\]])*.*"
+color brightyellow "[{};]"
+color green "#.*"
+color green "//.*"

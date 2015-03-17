@@ -1,0 +1,61 @@
+## Candy coloured HTML
+##
+## By Stefan Hamminga <stefan@prjct.net>
+##
+syntax "html" "\.html$" "shtml" "\.shtml$"
+
+## HTML tag properties
+color brightmagenta start="<" end=">"
+
+## HTML tag names
+color brightgreen "<[!/]?[a-zA-Z0-9]+"
+
+## Inline CSS warning highlight
+color brightred,black "style=[\"']"
+
+## IF tags
+color brightgreen "<![\-]*\[[^\[]+\]"
+
+## Value (text) strings
+color yellow "[\"'][^\"']+[\"']"
+
+## Value (numeric) strings
+color brightyellow "=[\"']?[0-9]*[.,x]*[0-9]+[\"']?"
+
+## Brighten tag id values
+color brightyellow " id=[\"'][^\"']*"
+color brightmagenta " id"
+
+## Handlebars / template markers
+color brightcyan start="\{\{" end="\}\}"
+
+## URL coloring (full and local)
+color brightred "[a-zA-Z0-9]*://[^'\"]*"
+color brightred "[\"']/[^\"']*"
+
+## Stray spaces or tabs
+color ,red ">[ \t]*$"
+
+## Scripts
+color white start="<script>" end="</script>"
+color brightgreen "<[/]?script>"
+
+## Color several symbols to make their content stand out
+color brightblue "<|</|>|\"|'|;|=|=\"|='|\{|\}|<!|<!--|-->"
+
+## Plain text color
+color brightwhite ">[^<>]*<"
+color brightwhite "^[ \t\s]*[^\<]*"
+
+## Color several symbols to make their content stand out
+color brightblue "<|>"
+
+## Comments
+color green start="<!--[^\[][^i][^f]" end="-->"
+color green "^[ \t\s]?//.*"
+
+## Language tag highlight, because I tend to overlook them
+color brightred,black "(href)?lang=\"[^\"']*\""
+
+## Server side includes
+color brightred start="<!--#" end="-->"
