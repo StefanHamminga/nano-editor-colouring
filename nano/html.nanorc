@@ -2,7 +2,7 @@
 ##
 ## By Stefan Hamminga <stefan@prjct.net>
 ##
-syntax "html" "\.html$" "shtml" "\.shtml$"
+syntax "html" "\.html$" "shtml" "\.shtml$" "ejs" ".ejs$"
 
 ## HTML tag properties
 color brightmagenta start="<" end=">"
@@ -20,7 +20,7 @@ color brightgreen "<![\-]*\[[^\[]+\]"
 color yellow "[\"'][^\"']+[\"']"
 
 ## Value (numeric) strings
-color brightyellow "=[\"']?[0-9]*[.,x]*[0-9]+[\"']?"
+color brightyellow "=[\"'-]?[0-9]*[.,x]*[0-9]+[\"']?"
 
 ## Brighten tag id values
 color brightyellow " id=[\"'][^\"']*"

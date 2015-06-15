@@ -1,9 +1,36 @@
 ## Here is an example for css files.
 ##
-syntax "css" "\.css$"
-color brightred     "."
-color brightyellow  start="\{" end="\}"
+syntax "css" "\.css$" "scss" "\.scss$"
+color brightblue  start="\{" end="\}"
+color brightblue  "^[ \t\S]*[a-zA-Z\-]+"
+
 color brightwhite   start=":" end="([;^\{]|$)"
-color brightblue    ":active|:focus|:hover|:link|:visited|:link|:after|:before|$"
-color brightblue    start="\/\*" end="\\*/"
-color green         ";|:|\{|\}"
+color brightred     "^[^\{]*\{"
+
+
+color white "[ \t]![a-zA-Z]+"
+
+color brightyellow "[\"'][^\"']+[\"']"
+
+color yellow "[ ,:\{\(-]+[0-9\.\,\*]+(%|px|rem|em|ex|rex|pt|vh|vw)?"
+
+color cyan ":active|:focus|:hover|:link|:visited|:after|:before|:first-of-type|:last-of-type|:first-child|:last-child|:nth-child|:emtpy|:checked|:enabled|:disabled"
+
+
+color yellow "\.[a-zA-Z]+[0-9a-zA-Z\-]*"
+color yellow "#[a-zA-Z]+[0-9a-zA-Z\-]*"
+
+color brightcyan "#([0-9a-zA-Z][0-9a-zA-Z][0-9a-zA-Z]){1,2}[^0-9a-zA-Z]"
+color brightcyan "[ ,:](aliceblue|antiquewhite|aqua|aquamarine|azure|beige|bisque|black|blanchedalmond|blue|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|cyan|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dodgerblue|firebrick|floralwhite|forrestgreen|fuchsia|gainsboro|ghostwhite|gold|goldenrod|gray|green|greenyellow|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightsteelblue|lightyellow|lime|limegreen|linen|magenta|maroon|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquiose|mediumvioletred|midnightblue|mindcream|mistyrose|moccasin|navajowhite|navy|oldlace|olive|olivedrab|orange|orangered|orchid|palegoldenrod|palegreen|paleturquiose|palevioletrod|papayawhip|peachpuff|peru|pink|plum|powderblue|purple|rebeccapurple|red|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|silver|skyblue|slateblue|slategray|snow|springgreen|steelblue|tan|teal|thistle|tomato|turquiose|violet|wheat|white|whitesmoke|yellow|yellowgreen)[ ,;]"
+
+color brightgreen "\$[^ ]+"
+
+color brightmagenta "^@(import|media)"
+
+color green "[<>{}\+,:;\"'\(\)]"
+color magenta "#\{\(|\)\}"
+
+# Comments
+color green         start="/\*" end="\*/"
+color green         "(^//.*)"
+

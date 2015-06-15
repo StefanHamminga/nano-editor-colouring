@@ -11,7 +11,7 @@
 
 ## New updated taken from http://wiki.linuxhelp.net/index.php/Nano_Syntax_Highlighting
 
-syntax "JavaScript" "\.(js)$" "\.(coffee)$"
+syntax "JavaScript" "\.(js)$" "\.(coffee)$" "\.(json)$"
 ## Default
 color white "^.+$"
 ## Decimal, cotal and hexadecimal numbers
@@ -37,7 +37,7 @@ color brightmagenta "^[A-Za-z0-9]*[\ \t]*\="
 color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
 ## Crud
 color ,green "[[:space:]]+$"
-color ,red "     +"
+#color ,red "     +"
 ## Comments
 color magenta start="\/\*" end="\*\/"
 color magenta "//.*"
